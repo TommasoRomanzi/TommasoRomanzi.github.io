@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #ECE1CEff;
+}
+
+/*nav*/
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #272624ff;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 130px;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #272624ff;
+}
+
+.nav-link:hover{
+    color: #E63E22ff;
+}
+
+.nav-logo img{
+    height: 80px;
+    margin-left: 130px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.left{
+    width: 50%;
+    margin-left: 120px;
+}
+.left h1{
+    font-size: 60px;
+}
+.left h3{
+    font-size: 25px;
+}
+.left p{
+    font-size: 15px;
+    width: 70%;
+}
+
+.right{
+    width: 50%;
+}
+.right img{
+    align-items: center;
+    margin-left: 20%;  
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2.5%;
+}
+
+@media only screen and (max-width: 1150px) {
+    .nav-logo img{
+        margin-left: 100px;
+    }
+    main{
+        display: block;
+        margin-top: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+    .left{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .right{
+        display: none;
+    }
+    .footer-line{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #ECE1CEff;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 4;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        margin-top: 150px;
+        z-index: 4;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+        z-index: 4;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-right: 130px;
+    }
+
+}
